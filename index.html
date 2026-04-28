@@ -1,77 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Aldo Castillo</title>
-
-    <!--FUENTES-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/main.css"/>
+    <meta name="description" content="Mi página personal - Portafolio profesional en comunicación digital">
+    <title>Home - Mi Portafolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=DM+Serif+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
-
-<!--HEADER-->
-<header class="header-principal">
-    <div class="logo">
-        <a href="index.html">Aldo Castillo Bernal</a>
-    </div>
+    <!-- HEADER -->
+    <header class="header-principal">
+        <div class="logo">
+            <a href="index.html">Mi Portafolio</a>
+        </div>
         <nav class="nav-principal">
             <ul>
-                <li><a href="biografia.html">Biografía</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="portafolio.html">Portafolio</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/pages/biografia.html">Biografía</a></li>
+                <li><a href="/pages/portafolio.html">Portafolio</a></li>
+                <li><a href="/pages/contacto.html">Contacto</a></li>
             </ul>
         </nav>
-</header>
+    </header>
 
-<!--CONTENIDO PRINCIPAL + ASIDE-->
-<main>
-    <!--INICIO-->
-    <section class="hero">
-            <h1>Comunicación audiovisual e investigación</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, saepe itaque ad tempora porro delectus culpa dolores distinctio dolorem ipsam aliquid sit nam dignissimos officiis aliquam, illo, corrupti accusantium earum.</p>
-    </section>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- SECCIÓN HERO -->
+        <section class="hero">
+            <h1>Especialista en Comunicación Digital e Investigación</h1>
+            <p>Estrategia de contenido, análisis de audiencias y producción multimedia para medios, agencias y emprendedores.</p>
+            <a href="pages/biografia.html" class="btn">Conoce más sobre mí</a>
+        </section>
+ 
+        <!-- ASIDE -->
+        <aside>
+            <div class="sidebar">
+                <!-- Biografía -->
+                <article class="card">
+                    <h2>Mi Biografía</h2>
+                    <p>Conoce mi experiencia profesional, formación académica y áreas de especialización en comunicación digital.</p>
+                    <a href="pages/biografia.html" class="btn">Leer más</a>
+                </article>
+ 
+                <!-- Portfolio -->
+                <article class="card">
+                    <h2>Mi Portafolio</h2>
+                    <p>Explora mis proyectos de investigación y trabajos realizados en el ámbito de la comunicación digital.</p>
+                    <a href="pages/portafolio.html" class="btn">Ver proyectos</a>
+                </article>
+ 
+                <!--  Contacto -->
+                <article class="card">
+                    <h2>Contactarme</h2>
+                    <p>¿Tienes una propuesta de colaboración? Ponte en contacto conmigo a través del formulario.</p>
+                    <a href="pages/contacto.html" class="btn btn-secondary">Contactarme</a>
+                </article>
+            </div>
+        </aside>
+    </main>
 
-    <!--ASIDE-->
-    <aside class="sidebar">
-        <h2>¿Qué hay en este sitio?</h2>
-        <article class="card">
-            <h3>Objeto 1</h3>
-            <figure>
-            <img src="assets/images/elva-800w.jpg" title="esta es una imagen de prueba">
-            </figure>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, suscipit rerum repudiandae hic eos quibusdam porro, explicabo id quos nobis reiciendis quas sapiente? Doloribus, veniam! Iste debitis aspernatur deserunt repudiandae!</p>
-        </article>
-        <article class="card">
-            <h3>Objeto 2</h3>
-            <figure>
-            <img src="assets/images/elva-800w.jpg" title="esta es una imagen de prueba">
-            </figure>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, suscipit rerum repudiandae hic eos quibusdam porro, explicabo id quos nobis reiciendis quas sapiente? Doloribus, veniam! Iste debitis aspernatur deserunt repudiandae!</p>
-        </article>
-          <article class="card">
-            <h3>Objeto 3</h3>
-            <figure>
-            <img src="assets/images/elva-800w.jpg"  title="esta es una imagen de prueba">
-            </figure>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, suscipit rerum repudiandae hic eos quibusdam porro, explicabo id quos nobis reiciendis quas sapiente? Doloribus, veniam! Iste debitis aspernatur deserunt repudiandae!</p>
-        </article>
-    </aside>
-
-</main>
-
-<!--FOOTER-->
+    <!-- FOOTER -->
     <footer class="footer-principal">
-        <p>Aldo Castillo Bernal - Lima / Vitoria-Gasteiz</p>
-        <p>Enlaces de interés</p>
-        <p>Enlaces de interés</p>
+        <p>&copy; 2026. Todos los derechos reservados. | <a href="pages/contacto.html">Contacto</a></p>
     </footer>
-
 </body>
-
 </html>

@@ -1,54 +1,87 @@
-/* BODY */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
-    padding-top: 130px;
+    padding-top: 110px;
     padding-bottom: 0;
-    background-color: rgb(245, 245, 220);
-    font-family: 'Roboto', serif;
+    background-color: rgb(242, 238, 234);
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.6;
+    color: rgb(7, 3, 140);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* HEADER */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 700;
+    margin: 0;
+}
 
-.header-principal{
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+p {
+    margin: 0 0 15px 0;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+.header-principal {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 20;
-
-    background-color: rgb(0, 0, 0);
-    color: rgb(245, 245, 220);
-
+    background-color: rgb(7, 3, 140);
+    color: rgb(242, 238, 234);
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    height: 80px;
-    padding: 15px;
-    gap: 10px;
+    padding: 10px 15px;
+    gap: 5px;
+    box-shadow: 0 2px 4px rgba(7, 3, 140, 0.1);
 }
 
-/* LOGO + MARCA */
 .logo {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
 }
 
 .logo a {
-    color:brown;
+    color: rgb(242, 5, 25);
     text-decoration: none;
 }
 
-/* NAVEGACION PRINCIPAL */
+.logo a:active {
+    color: rgb(242, 22, 81);
+}
 
 .nav-principal ul {
     list-style: none;
     margin: 0;
     padding: 0;
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -57,31 +90,29 @@ body {
 }
 
 .nav-principal a {
-    color:blanchedalmond;
+    color: rgb(242, 22, 81);
     text-decoration: none;
     font-size: 14px;
     padding: 5px 10px;
+    display: block;
+    white-space: nowrap;
 }
 
-
-/* MAIN = CONTENIDO PRINCIAL Y  SIDEBAR */
-
+.nav-principal a:active {
+    color: rgb(242, 5, 25);
+}
 
 main {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 0 20px;
-}
-
-h1, h2, h3 {
-    font-family: 'DM Serif Display', serif;
-    font-weight: 700;
+    flex: 1;
 }
 
 .hero {
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(200, 50, 50);
+    background-color: white;
+    border: 2px solid rgb(242, 22, 81);
     border-radius: 8px;
     padding: 30px 20px;
     margin-bottom: 10px;
@@ -89,49 +120,45 @@ h1, h2, h3 {
 
 .hero h1 {
     font-size: 24px;
-    margin-top: 0;
-    margin-bottom: 15px;
+    margin: 0 0 15px 0;
+    color: rgb(7, 3, 140);
 }
 
 .hero p {
     font-size: 14px;
-    margin: 0;
+    margin: 0 0 20px 0;
+    color: rgb(7, 3, 140);
 }
 
-/* SIDEBAR */
-
-
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.sidebar h2 {
-    font-size: 20px;
-    margin: 0 0 10px 0;
-}
-
-/* TARJETAS DE CONTENIDO */
 .card {
-    background-color: rgb(0, 0, 0);
-    border: 1px solid rgb(221,221,221);
+    background-color: rgb(7, 3, 140);
+    border: 1px solid rgb(217, 211, 207);
     border-radius: 8px;
     padding: 20px;
-    color: rgb(245, 245, 220);
+    color: rgb(242, 238, 234);
 }
 
 .card h3 {
     font-size: 16px;
     margin: 0 0 10px 0;
-    color: rgb(245, 245, 220);
+    color: rgb(242, 238, 234);
+}
+
+.card h2 {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    color: rgb(242, 238, 234);
 }
 
 .card p {
     font-size: 14px;
-    margin: 0;
+    margin: 0 0 15px 0;
     line-height: 1.6;
-    color: rgb(245, 245, 220)
+    color: rgb(242, 238, 234);
+}
+
+.card p:last-child {
+    margin-bottom: 0;
 }
 
 .card figure {
@@ -148,101 +175,656 @@ h1, h2, h3 {
     display: block;
 }
 
-/* FOOTER */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
- .footer-principal {
-    background-color: rgb(0, 0, 0);
-    color: rgb(245, 245, 220);
-    
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(242, 5, 25);
+    color: rgb(242, 238, 234);
+    text-decoration: none;
+    border: 2px solid rgb(242, 5, 25);
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.btn:active {
+    background-color: rgb(242, 22, 81);
+    border-color: rgb(242, 22, 81);
+}
+
+.btn-secondary {
+    background-color: rgb(242, 22, 81);
+    border-color: rgb(242, 22, 81);
+}
+
+.btn-secondary:active {
+    background-color: rgb(242, 5, 25);
+    border-color: rgb(242, 5, 25);
+}
+
+.footer-principal {
+    background-color: rgb(7, 3, 140);
+    color: rgb(242, 238, 234);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 5px;
-    
-    padding: 30px 0;
+    padding: 40px 0;
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 0px;
+    margin-top: 30px;
+    border-top: 2px solid rgb(242, 22, 81);
 }
- 
-/*===========768=============== */
 
+.footer-principal p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-principal a {
+    color: rgb(242, 5, 25);
+    text-decoration: none;
+}
+
+.footer-principal a:active {
+    color: rgb(242, 22, 81);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+}
+
+.contact-form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: 500;
+    color: rgb(7, 3, 140);
+    font-size: 16px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(217, 211, 207);
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: rgb(7, 3, 140);
+    background-color: white;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-info-box {
+    background-color: white;
+    border: 1px solid rgb(217, 211, 207);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.contact-info-box h3 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    color: rgb(7, 3, 140);
+}
+
+.contact-info-box p {
+    margin: 0;
+    font-size: 16px;
+    color: rgb(7, 3, 140);
+    line-height: 1.8;
+}
+
+.contact-info-box a {
+    color: rgb(242, 5, 25);
+    text-decoration: none;
+}
+
+.contact-social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-social-links li {
+    margin: 0;
+}
+
+.contact-social-links a {
+    display: inline-block;
+    padding: 10px 0;
+    color: rgb(242, 5, 25);
+    text-decoration: none;
+}
+
+.bio-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.bio-content {
+    flex: 1;
+}
+
+.bio-with-image {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bio-text {
+    flex: 1;
+}
+
+.bio-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgb(7, 3, 140);
+    margin-bottom: 15px;
+}
+
+.bio-image {
+    flex: 1;
+    margin: 0 auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bio-image img {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    max-width: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.bio-image figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+}
+
+.competencies-section {
+    margin-bottom: 30px;
+}
+
+.competencies-section h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgb(242, 22, 81);
+    padding-bottom: 15px;
+    color: rgb(7, 3, 140);
+}
+
+.competencies-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.competency-card {
+    flex-direction: column;
+    padding: 15px;
+}
+
+.competency-image {
+    margin: 0 0 15px 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.competency-image img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.competency-card h3 {
+    margin: 0;
+    font-size: 16px;
+    color: rgb(242, 238, 234);
+}
+
+.portfolio-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.portfolio-content h1 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgb(242, 22, 81);
+    padding-bottom: 15px;
+}
+
+.portfolio-intro {
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgb(7, 3, 140);
+    margin-bottom: 30px;
+}
+
+.portfolio-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.portfolio-card {
+    background-color: white;
+    border: 1px solid rgb(217, 211, 207);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-image {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.portfolio-video {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.portfolio-video iframe {
+    display: block;
+    width: 100%;
+    border: none;
+}
+
+.portfolio-info {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-category {
+    font-size: 14px;
+    color: rgb(242, 5, 25);
+    margin: 0 0 10px 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.portfolio-title {
+    margin: 0;
+    font-size: 18px;
+    color: rgb(7, 3, 140);
+}
+
+.cta-section {
+    margin-top: 30px;
+    padding: 30px 20px;
+    background-color: white;
+    border: 2px solid rgb(242, 22, 81);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.cta-section h2 {
+    margin: 0 0 15px 0;
+    color: rgb(7, 3, 140);
+    border: none;
+    padding-bottom: 0;
+}
+
+.cta-section p {
+    margin: 0 0 20px 0;
+    color: rgb(7, 3, 140);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-form-section {
+    flex: 1;
+}
+
+.contact-info-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* MEDIA QUERY - TABLET (768px) */
 @media (min-width: 768px) {
-    
-    /* Ajustar body padding */
     body {
-        padding-top: 120px;
-        padding-bottom: 0;
+        padding-top: 100px;
     }
-    
-    /* Header: Logo y nav lado a lado */
+
     .header-principal {
-        height: 100px;
         flex-direction: row;
         justify-content: space-between;
-        padding: 0 20px;
+        align-items: center;
+        padding: 10px 30px;
+        gap: 20px;
     }
-    
+
     .logo {
-        font-size: 22px;
+        font-size: 18px;
     }
-    
+
     .nav-principal ul {
         gap: 20px;
         flex-wrap: nowrap;
     }
-    
+
     .nav-principal a {
         font-size: 16px;
+        padding: 10px 15px;
     }
-    
-    /* Main: todavía en flex column */
+
     main {
         padding: 0 30px;
         gap: 30px;
+        max-width: 1400px;
+        margin: 0 auto;
+        width: 100%;
     }
-    
+
     .hero {
-        padding: 40px;
+        padding: 40px 30px;
     }
-    
+
     .hero h1 {
         font-size: 28px;
     }
-    
-    /* Sidebar en la parte inferior*/
+
     .sidebar {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 20px;
     }
-    
-    .sidebar h2 {
-        font-size: 22px;
-        grid-column: 1 / -1;
+
+    .sidebar .card {
+        flex: 1;
+        min-width: calc(33.333% - 14px);
     }
-    
+
+    .card {
+        padding: 30px;
+    }
+
     .card h3 {
         font-size: 18px;
     }
-    
+
     .card img {
         min-height: 250px;
     }
-    
-    /* Footer: De flex column a flex row */
 
-.footer-principal {
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 30px 20px;
+    .footer-principal {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    .bio-with-image {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .bio-text {
+        flex: 1;
+    }
+
+    .bio-image {
+        flex: 1;
+        max-width: 100%;
+    }
+
+    .bio-section-wrapper {
+        flex-direction: row;
+        gap: 30px;
+        align-items: flex-start;
+    }
+
+    .bio-content {
+        flex: 2;
+    }
+
+    .bio-section-wrapper aside {
+        flex: 1;
+    }
+
+    .bio-section-wrapper .sidebar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bio-section-wrapper .card {
+        flex: 1;
+    }
+
+    .competencies-flex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .competencies-flex .card {
+        flex: 1;
+        min-width: calc(33.333% - 14px);
+    }
+
+    .portfolio-flex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .portfolio-flex .portfolio-card {
+        flex: 1;
+        min-width: calc(50% - 10px);
+    }
+
+    .portfolio-wrapper {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .portfolio-content {
+        flex: 2;
+    }
+
+    .portfolio-wrapper aside {
+        flex: 1;
+    }
+
+    .contact-wrapper {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .contact-form-section {
+        flex: 1.2;
+    }
+
+    .contact-info-section {
+        flex: 0.8;
+    }
 }
-} /*===========768=============== */
 
-
-/*===========1200=============== */
-
+/* MEDIA QUERY - DESKTOP (1200px) */
 @media (min-width: 1200px) {
+    body {
+        padding-top: 120px;
+    }
 
+    .header-principal {
+        padding: 15px 40px;
+        gap: 30px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-principal a {
+        font-size: 17px;
+        padding: 15px 20px;
+    }
+
+    main {
+        padding: 0 40px;
+        gap: 40px;
+        max-width: 1600px;
+    }
+
+    .hero {
+        padding: 40px 40px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .card {
+        padding: 30px;
+    }
+
+    .card h3 {
+        font-size: 20px;
+    }
+
+    .footer-principal {
+        padding: 40px 40px;
+        gap: 40px;
+    }
+
+    .bio-section-wrapper {
+        flex-direction: row;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    .bio-content {
+        flex: 2;
+    }
+
+    .bio-with-image {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bio-section-wrapper aside {
+        flex: 1;
+    }
+
+    .bio-section-wrapper .sidebar {
+        flex-direction: column;
+    }
+
+    .competencies-flex {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .competencies-flex .card {
+        min-width: calc(33.333% - 20px);
+    }
+
+    .portfolio-flex {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .portfolio-flex .portfolio-card {
+        min-width: calc(33.333% - 20px);
+    }
+
+    .portfolio-wrapper {
+        flex-direction: row;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    .portfolio-content {
+        flex: 2.5;
+    }
+
+    .portfolio-wrapper aside {
+        flex: 1;
+    }
+
+    .portfolio-image img {
+        min-height: 300px;
+    }
+
+    .contact-wrapper {
+        flex-direction: row;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    .contact-form-section {
+        flex: 1.5;
+    }
+
+    .contact-info-section {
+        flex: 1;
+    }
 }
